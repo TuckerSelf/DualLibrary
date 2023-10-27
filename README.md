@@ -1,2 +1,15 @@
 # DualLibrary
-Dual Assignment for Library Class and List
+/**
+ * @file README
+ * @author Tucker Self, Braden Windsor
+ * @date 2023-11-1
+ * @brief Group Library Assignment
+ * 
+ * 
+ *
+ *
+ *
+ *
+ *
+ * 
+ */
