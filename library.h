@@ -8,4 +8,37 @@
  */
 
 #include <string>
-#include "book.h"
+
+#ifndef LIBRARY_H
+#define LIBRARY_H
+
+class library{
+  
+private:
+  
+
+public:
+  library();
+  
+  ~library();
+
+  void push_front();
+
+  void push_back();
+
+  void read_file(std::string fileName);
+
+  void write_file(std::string fileName);
+
+  void insert_sorted();
+
+  std::string find_author();
+
+  std::string find_album();
+
+  void delete(std::string authName, std::string bookName);
+
+  void print_list();
+};
+
+#endif //LIBRARY_H
