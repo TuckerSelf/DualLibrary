@@ -13,8 +13,6 @@
 #include <string>
 
 struct book{
-  Node *next;
-  
   std::string title;
   std::string author;
   int pages;

@@ -8,6 +8,7 @@
  */
 
 #include <string>
+#include "book.h"
 
 #ifndef LIBRARY_H
 #define LIBRARY_H
@@ -15,7 +16,7 @@
 class library{
   
 private:
-  
+  std::list<book> entries;
 
 public:
   void push_front(std::string bookTitle, std::string authName, int pageNum, std::string isbnInsert, float cover, int yearNum);
