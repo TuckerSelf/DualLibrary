@@ -22,19 +22,19 @@ public:
   
   ~library();
 
-  void push_front();
+  void push_front(std::string bookTitle, std::string authName, int pageNum, std::string isbnInsert, float cover, int yearNum);
 
-  void push_back();
+  void push_back(std::string bookTitle, std::string authName, int pageNum, std::string isbnInsert, float cover, int yearNum);
 
   void read_file(std::string fileName);
 
   void write_file(std::string fileName);
 
-  void insert_sorted();
+  void insert_sorted(std::string bookTitle, std::string authName, int pageNum, std::string isbnInsert, float cover, int yearNum);
 
-  std::string find_author();
+  std::string find_author(std::string authName);
 
-  std::string find_album();
+  std::string find_album(std::string bookTitle);
 
   void delete(std::string authName, std::string bookName);
 
