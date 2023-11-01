@@ -15,14 +15,6 @@
 
 using namespace std;
 
-library::library(){
-
-}
-
-library::~library(){
-
-}
-
 void library::push_front(string bookTitle, string authName, int pageNum, string isbnInsert, float cover, int yearNum){
 
 }

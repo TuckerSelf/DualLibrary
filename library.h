@@ -18,10 +18,6 @@ private:
   
 
 public:
-  library();
-  
-  ~library();
-
   void push_front(std::string bookTitle, std::string authName, int pageNum, std::string isbnInsert, float cover, int yearNum);
 
   void push_back(std::string bookTitle, std::string authName, int pageNum, std::string isbnInsert, float cover, int yearNum);

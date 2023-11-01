@@ -7,6 +7,9 @@
  * Creates the book struct for use in the library class
  */
 
+#ifndef BOOK_H
+#define BOOK_H
+
 #include <string>
 
 struct book{
@@ -19,3 +22,5 @@ struct book{
   float price;
   int year;
 };
+
+#endif //BOOK_H
