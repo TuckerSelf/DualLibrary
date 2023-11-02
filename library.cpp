@@ -53,7 +53,7 @@ void library::write_file(string fileName){
 
   for(it = entries.begin(); it != entries.end(); it++){
     outFile << it -> title << endl << it -> author << endl << it -> pages << endl << it -> isbn << endl
-	    << it -> price << endl -> year << endl;
+	    << it -> price << endl << it  -> year << endl;
   }
 
   outFile.close();
@@ -114,7 +114,7 @@ string library::find_author(string authName){
     return authorBooks;
   }
   
-  for(it = entries.begin(); it != entris.end(); it++){
+  for(it = entries.begin(); it != entries.end(); it++){
     if(it -> author == authName){
       authorBooks += it -> title + "\n";
     }
@@ -134,11 +134,11 @@ string library::find_album(string authName){
 
   for(it = entries.begin(); it != entries.end(); it++){
     if(it -> author == authName){
-      album += "\nBook Title: " + entries.title;
-      album += "\nPage Number: " + to_string(entries.pages);
-      album += "\nisbn: " + entries.isbn;
-      album += "\nCover Price: " + to_string(entries.price);
-      album += "\nYear Released: " + to_string(entries.year);
+      album += "\nBook Title: " + it -> title;
+      album += "\nPage Number: " + to_string(it -> pages);
+      album += "\nisbn: " + it -> isbn;
+      album += "\nCover Price: " + to_string(it -> price);
+      album += "\nYear Released: " + to_string(it -> year);
       album += "\n";
     }
   }
@@ -150,7 +150,7 @@ string library::find_album(string authName){
   return album;
 }
 
-void library::delete(string authName, string bookName){
+void library::Delete(string authName, string bookName){
   list<book>::iterator it;
 
   it = entries.begin();

@@ -130,7 +130,7 @@ public:
  * @post removes the data that was stored in entries list
  * 
  */
-  void delete(std::string authName, std::string bookName);
+  void Delete(std::string authName, std::string bookName);
 
 
 /**
