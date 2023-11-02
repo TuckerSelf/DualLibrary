@@ -56,6 +56,7 @@ int main() {
     
     else if (input == 4){
       cout << "Enter author's name: ";
+      cin.ignore();
       getline(cin, authName);
 
       cout << myL.find_author(authName);
@@ -73,6 +74,7 @@ int main() {
     else if (input == 6){
       cout << "Enter the book you wish to add\n";
 
+      cin.ignore();
       cout << "Enter title: ";
       getline(cin, title);
 
@@ -99,10 +101,12 @@ int main() {
       cout << "Enter the book you wish to delete\n";
 
       cout << "Enter author: ";
-      cin >> authName;
+      cin.ignore();
+      getline(cin, authName);
 
       cout << "Enter title: ";
-      cin >> title;
+      cin.ignore();
+      getline(cin, title);
 
       myL.Delete(authName, title);
       cout << "\n\n";
