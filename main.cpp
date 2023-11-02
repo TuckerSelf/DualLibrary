@@ -58,15 +58,15 @@ int main() {
       cout << "Enter author's name: ";
       getline(cin, authName);
 
-      myL.find_author(authName);
+      cout << myL.find_author(authName);
       cout <<"\n\n";
     }
     
     else if (input == 5){
-      cout << "Enter book name: ";
-      cin >> bookName;
+      cout << "Enter book title: ";
+      cin >> title;
 
-      myL.find_album(bookName);
+      cout << myL.find_album(title);
       cout << "\n\n";
     }
     
@@ -104,7 +104,7 @@ int main() {
       cout << "Enter title: ";
       cin >> title;
 
-      myL.delete(authName, title);
+      myL.Delete(authName, title);
       cout << "\n\n";
     }
     
