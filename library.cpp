@@ -128,29 +128,56 @@ string library::find_author(string authName){
   return authorBooks;
 }
 
-string library::find_album(string bookTitle){
+string library::find_album(string authName){
   string album = "";
   list<book>::iterator it;
 
-  if(){
-
+  for(it = entries.begin(); it != entries.end(); it++){
+    if(it -> author == authName){
+      album += "\nBook Title: " + entries.title;
+      album += "\nPage Number: " + to_string(entries.pages);
+      album += "\nisbn: " + entries.isbn;
+      album += "\nCover Price: " + to_string(entries.price);
+      album += "\nYear Released: " + to_string(entries.year);
+      album += "\n";
+    }
   }
   
+  if(album == ""){
+    album = "No information could be found.";
+  }
+
+  return album;
 }
 
 void library::delete(string authName, string bookName){
   list<book>::iterator it;
 
-  if(){
-    if(){
-
-    }
+  it = entries.begin();
+  while(it != entries.end() && it -> title == bookName){
+    it++;
   }
-
-  entries.erase();
+  
+  if(it -> author != authName){
+    cout << "Data not found." << endl << endl;
+  }
+  else{
+    entries.erase(it);
+    cout << bookName << " removed." << endl << endl;
+  }
 }
 
 void library::print_list(){
   list<book>::iterator it;
-  
+
+  if(entries.empty()){
+    cout << "No book information could be attained." << endl << endl;
+  }
+  else{
+    for(it = entries.begin(); it != entries.end(); it++){
+      cout << it -> author << " - " << it -> title << endl << "Page Number: " << it -> pages << endl
+	   << "isbn: " << it -> isbn << endl << "Cover Price: " << it -> price << endl << endl;
+    }
+    cout << endl;
+  }
 }
