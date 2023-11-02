@@ -154,7 +154,7 @@ void library::Delete(string authName, string bookName){
   list<book>::iterator it;
 
   it = entries.begin();
-  while(it != entries.end() && it -> title == bookName){
+  while(it != entries.end() && it -> title != bookName){
     it++;
   }
   
